@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhaolei.dao.impl.UserDao">
+	<insert id="save">
+		insert into users (email,name,password,nickName,regDate) values(#{email},#{name},#{password},#{nickName},#{regDate})
+	</insert>
+	
+	<delete id="delete">
+		delete from users where email = #{email}
+	</delete>
+	
+	<delete id="update">
+		update users set password = #{password},nickName = #{nickName} where email = #{email}
+	</delete>
+	
+	<select id="getOne" resultType="com.zhaolei.model.User">
+		select * from users where name = #{name}
+	</select>
+	
+	<select id="getAll" resultType="com.zhaolei.model.User">
+		select * from users 
+	</select>
+</mapper>
