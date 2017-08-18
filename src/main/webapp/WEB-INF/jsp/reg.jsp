@@ -29,6 +29,7 @@
    <div class="form-group ">
     <label for="exampleInputPassword1">姓名</label>
     <input name="name" type="text" class="form-control" id="exampleInputPassword1" placeholder="name">
+    ${requestScope.error}
   </div>
    <div class="form-group ">
     <label for="exampleInputPassword1">昵称</label>
